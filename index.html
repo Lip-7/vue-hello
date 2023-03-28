@@ -12,14 +12,16 @@
 <body>
     <main class="d-flex justify-content-center align-items-center w-100 vh-100 bg-dark overflow-hidden">
         <div id="app" class="bg-warning rounded-circle text-white text-center">
-            <h1 class="">{{title}}</h1>
+            <h1 class="pt-3">{{title}}</h1>
             <form @submit.prevent="changeImg" class="text-dark">
-                <label class="d-block mb-2 fw-bold" for="imgUrl">{{inputMsg}}</label>
-                <input type="text" name="imgUrl" id="imgUrl" placeholder="es. https://boolean.com/images/345565" v-model="newImgUrl">
-                <button type="submit">Submit</button>
+                <label class="d-block mb-2 fw-bold form-label" for="imgUrl">{{inputMsg}}</label>
+                <div class="input-group d-flex justify-content-center align-items-center gap-3">
+                    <input type="text" name="imgUrl" id="imgUrl" placeholder="es. https://boolean.com/images/345565" v-model="newImgUrl">
+                    <button type="submit" class="btn btn-dark rounded-3">Submit</button>
+                </div>
             </form>
             <div class="imgwrapper w-100 d-flex justify-content-center mt-5">
-                <img class="object-fit-cover" :src="imgUrl " alt="">
+                <img class="object-fit-cover rounded-5" :src="imgUrl " alt="">
             </div>
         </div>
     </main>
