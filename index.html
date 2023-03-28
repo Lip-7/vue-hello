@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main class="d-flex justify-content-center align-items-center w-100 vh-100 bg-dark">
+        <div id="app" class="bg-warning rounded-circle text-white text-center">
+            <h1 class="">{{title}}</h1>
+            <form @submit.prevent="changeImg" class="text-black">
+                <label class="d-block mb-2" for="imgUrl">{{inputMsg}}</label>
+                <input type="text" name="imgUrl" id="imgUrl" placeholder="es. https://boolean.com/images/345565" v-model="newImgUrl">
+                <button type="submit">Submit</button>
+            </form>
+            <div class="imgwrapper w-100 d-flex justify-content-center mt-5">
+                <img :src="imgUrl " alt="">
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/utility.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.imgwrapper{
+    width: 200px;
+    height: 100px;
+}
+#app{
+    width: 600px;
+    height: 500px;
+}
