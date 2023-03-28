@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <main class="d-flex justify-content-center align-items-center w-100 vh-100 bg-dark">
+    <main class="d-flex justify-content-center align-items-center w-100 vh-100 bg-dark overflow-hidden">
         <div id="app" class="bg-warning rounded-circle text-white text-center">
             <h1 class="">{{title}}</h1>
-            <form @submit.prevent="changeImg" class="text-black">
-                <label class="d-block mb-2" for="imgUrl">{{inputMsg}}</label>
+            <form @submit.prevent="changeImg" class="text-dark">
+                <label class="d-block mb-2 fw-bold" for="imgUrl">{{inputMsg}}</label>
                 <input type="text" name="imgUrl" id="imgUrl" placeholder="es. https://boolean.com/images/345565" v-model="newImgUrl">
                 <button type="submit">Submit</button>
             </form>
             <div class="imgwrapper w-100 d-flex justify-content-center mt-5">
-                <img :src="imgUrl " alt="">
+                <img class="object-fit-cover" :src="imgUrl " alt="">
             </div>
         </div>
     </main>
